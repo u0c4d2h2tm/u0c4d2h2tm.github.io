@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
+    body{margin: 0;}
       img{width:400px;}
       /*img{transition: transform .3s ease}
       img:hover{transform: scale(1.2);}*/
-      .container{display:flex;}
-      .item1{ flex-grow:2;}
-      .item2{ flex-grow:4;}
-      .item3{ flex-grow:3;}
+      .container{
+          display:flex;
+        height: 100vh;}
+      .item1{ flex-grow:2;
+          background-image: url("bgBlue");}
+      .item2{ flex-grow:4;
+          background-image:green;}
+      .item3{ flex-grow:3;
+          background-image:red;}
     </style>
     <link
      rel="stylesheet"
@@ -130,7 +136,7 @@
           <li onclick="sell_mine()">マイン</li>
           <li>ファクトリー</li>
         </ul>
-        
+
       </div>
     </div>
 
