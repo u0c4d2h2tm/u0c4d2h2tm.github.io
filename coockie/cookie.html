@@ -62,7 +62,7 @@
       function cursor() {
         if(cookie_count >=10){
           cookie_count -= 10;
-          let r_id =s etInterval(cookieClick,1000,1);
+          let r_id =setInterval(cookieClick,1000,1);
           event_idz.push(r_id);
 
         }
@@ -71,7 +71,7 @@
         function sell_cursor(){
           if(event_ids.length > 0){
             let r_id=event_ids.pop();
-            clearInteval(r_id);
+            clearInterval(r_id);
           }
 
 
@@ -105,6 +105,7 @@
           <span id="cookie_count"></span> cookies
         </p>
         <img id="cookie_img" onclick="cookieClick(1)" src="cookie.png" alt="">
+
       </div>
 
       <div class="item2">
@@ -120,6 +121,7 @@
           <li onclick="mine()">マイン</li>
           <li>ファクトリー</li>
         </ul>
+
         //売却
         <ul>
           <li onclick="sell_cursor()">カーソル</li>
@@ -128,6 +130,7 @@
           <li onclick="sell_mine()">マイン</li>
           <li>ファクトリー</li>
         </ul>
+        
       </div>
     </div>
 
