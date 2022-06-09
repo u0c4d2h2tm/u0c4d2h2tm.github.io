@@ -14,7 +14,7 @@
       .item1{ flex-grow:2;
           background-color:yellow;}
       .item2{ flex-grow:4;
-          background-image: image(biBlue);}
+          background-image:image(biBlue);}
       .item3{ flex-grow:3;
           background-color:red;}
     </style>
@@ -104,6 +104,14 @@
         }
       }
 
+      /*施設切り替え処理*/
+      function buildings_switch() {
+        let list_ele = document.getElementById('buildings_buy');
+        list.style.display ="none";
+      }
+
+
+
     </script>
 
     <div class="container">
@@ -121,7 +129,8 @@
       </div>
 
       <div class="item3">
-        //購入
+       <div id="buildings_switch">
+        <span onclick="buildings_switch">//購入//</span>
         <ul>
           <li onclick="cursor()">カーソル</li>
           <li onclick="grandma()">グランマ</li>
@@ -129,8 +138,10 @@
           <li onclick="mine()">マイン</li>
           <li>ファクトリー</li>
         </ul>
+      </div>
 
-        //売却
+      <div id="buildings_sel">
+        <span onclick="buildings_switch">//売却//</span>
         <ul>
           <li onclick="sell_cursor()">カーソル</li>
           <li onclick="sell_grandma()">グランマ</li>
@@ -138,11 +149,12 @@
           <li onclick="sell_mine()">マイン</li>
           <li>ファクトリー</li>
         </ul>
+      </div>
+
 
       </div>
+
     </div>
-
-
 
   </body>
 </html>
