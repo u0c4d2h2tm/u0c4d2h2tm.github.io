@@ -14,7 +14,7 @@
       .item1{ flex-grow:2;
           background-color:yellow;}
       .item2{ flex-grow:4;
-          background-image:image(biBlue);}
+          background-image:bgBlue;}
       .item3{ flex-grow:3;
           background-color:red;}
 
@@ -112,8 +112,16 @@
 
       /*施設切り替え処理*/
       function buildings_switch() {
-        let list_ele = document.getElementById('buildings_buy');
-        list.style.display ="none";
+        let buy_ele = document.getElementById('buildings_buy');
+        let sell_ele = document.getElementById('buildings_buy');
+
+        if(buy_ele.style.display != "none"){
+          buy_ele.style.display = "none";
+          sell_ele.style.display = "block"
+        }else{
+          buy_ele.style.display = "block";
+          sell_ele.style.display = "none"
+        }
       }
 
 
