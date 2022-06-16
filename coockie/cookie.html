@@ -8,6 +8,20 @@
       img{width:400px;}
       /*img{transition: transform .3s ease}
       img:hover{transform: scale(1.2);}*/
+
+      script type="text/javascript">
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('GET', "なんかUPL");
+      xhr.send();
+
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState === 4 && xhr.status === 200) {
+      let weathercode = JSON.parse(xhr.responseText)["daily"]["weathercode"][1]
+      document.write( weathercode );
+    }
+}
+
       .container{
           display:flex;
         height: 100vh;}
@@ -134,7 +148,7 @@
         <p>
           <span id="cookie_count"></span> cookies
         </p>
-        <img id="cookie_img" onclick="cookieClick(1)" src="dog.png" alt="">
+        <img id="cookie_img" onclick="cookieClick(1)" src="do.png" alt="">
 
       </div>
 
