@@ -37,36 +37,6 @@
     <script type="text/javascript">
 
 
-clss building{
-  //初期値の設定
-  construotor(time,num){
-    this.event_ids=[];
-    this.interval_time=time;
-    this.add_num;
-    }
-    //カウントアップのメゾット
-    count_up(num){
-      count+=num
-    }
-    //購入した場合のメゾット
-    buy(){
-      let self=this;
-      let return_id=setInterval(function()){
-        self.count_up(self.add_num);
-      },1000);
-      this.event_ids.push(return_id);
-    }
-    //売却のメゾット
-    sell(){
-      let return_id=this.event_ids.pop();
-      clearInterval(return_id);
-    }
-}
-
-
-
-
-
     /*インターバル*/
     let event_ids=[]
 
@@ -82,6 +52,44 @@ clss building{
       function save_action() {
         localStorage.setItem("ls_count",cookie_count);
       }
+
+      clss building{
+        //初期値の設定
+        construotor(time,num){
+          this.event_ids=[];
+          this.interval_time=time;
+          this.add_num;
+          }
+          //カウントアップのメゾット
+          count_up(num){
+            count+=num
+          }
+          //購入した場合のメゾット
+          buy(){
+            let self=this;
+            let return_id=setInterval(function()){
+              self.count_up(self.add_num);
+            },1000);
+            this.event_ids.push(return_id);
+          }
+          //売却のメゾット
+          sell(){
+            let return_id=this.event_ids.pop();
+            clearInterval(return_id);
+          }
+      }
+
+      //核施設のオブジェクトをクラスから生成
+      let cursor = new building(10000,1);
+      let grandma = new Building(10000,1);
+      let farm = new Building(10000,8);
+      let mine = new Building(10000,20);
+
+      //カーソルの施設を買うときは
+      cursor.buy();
+
+      //カーソルの施設を売るときは
+      cursor.sell();
 
       su_event_id = setInterval(screen_update,100);
       function screen_update() {
