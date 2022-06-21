@@ -86,11 +86,11 @@
       //カーソルの施設を売るときは
       cursor.sell();
 
+
       setInterval(save_action,1000);
       function save_action() {
         localStorage.setItem("ls_count",cookie_count);
       }
-      
 
       su_event_id = setInterval(screen_update,100);
       function screen_update() {
@@ -185,7 +185,7 @@
 
       <div class="item3">
        <div id="buildings_buy">
-        <span onclick="buildings_switch()">//購入//</span>
+        <span onclick="buildings_switch('buy')">//購入//</span>
         <ul>
           <li onclick="cursor()">カーソル</li>
           <li onclick="grandma()">グランマ</li>
