@@ -44,6 +44,7 @@
       let ls_count = localStorage.getItem("ls_count");
       if (ls_count){
         cookie_count = parseInt(ls_count);
+        cookie_count=1000;
       }else {
         cookie_count = 0;
       }
