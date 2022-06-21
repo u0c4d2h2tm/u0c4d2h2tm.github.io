@@ -74,14 +74,6 @@
             clearInterval(return_id);
           }
       }
-
-      setInterval(save_action,1000);
-      function save_action() {
-        localStorage.setItem("ls_count",cookie_count);
-      }
-
-
-
       //核施設のオブジェクトをクラスから生成
       let cursor = new building(10000,1);
       let grandma = new Building(10000,1);
@@ -93,6 +85,12 @@
 
       //カーソルの施設を売るときは
       cursor.sell();
+
+      setInterval(save_action,1000);
+      function save_action() {
+        localStorage.setItem("ls_count",cookie_count);
+      }
+      
 
       su_event_id = setInterval(screen_update,100);
       function screen_update() {
