@@ -118,9 +118,9 @@
         void cookie_img.offsetWidth;
         cookie_img.classList.add('animate__animated','animate__shakeX');
 
-
+        var count_text = document.getElementById('cookie_count')
         cookie_count= cookie_count + num;
-
+        count_text.textContent = cookie_count;
       }
 
       function cursor() {
