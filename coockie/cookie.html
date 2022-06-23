@@ -54,7 +54,7 @@
 
       class Building{
         //初期値の設定
-        construotor(time,num,cost){
+        constructor(time,num,cost){
           this.event_ids=[];
           this.interval_time=time;
           this.add_num = num;
@@ -75,7 +75,7 @@
             if (cookie_count > this.cost) {
               cookie_count -= this.cost;
               let self = this;
-              let return_id =s etInterval(function(){
+              let return_id =setInterval(function(){
                 self.count_up(self.add_num);
               },1000);
               this.interval_ids.push(return_id);
@@ -89,19 +89,13 @@
           }
       }
       //核施設のオブジェクトをクラスから生成
-      let cursor = new building(10000,1);
+      let cursor = new Building(10000,1);
 
       let grandma = new Building(10000,1);
 
       let farm = new Building(10000,8);
 
       let mine = new Building(10000,20);
-
-      //カーソルの施設を買うときは
-      cursor.buy();
-
-      //カーソルの施設を売るときは
-      cursor.sell();
 
 
       setInterval(save_action,1000);
@@ -130,6 +124,7 @@
 
       }
 
+/*
       function cursor() {
         if(cookie_count >=10){
           cookie_count -= 10;
@@ -165,7 +160,7 @@
           cookie_count -= 300;
           setInterval(cookieClick,1000,100);
         }
-      }
+      }*/
 
       /*施設切り替え処理*/
       function buildings_switch() {
