@@ -60,6 +60,11 @@
           this.add_num = num;
           this.cost = cost;
           }
+
+          get count(){
+            return this.interval_ids.length;
+          }
+
           //カウントアップのメゾット
           count_up(num){
             count+=num
@@ -114,13 +119,12 @@
         clearInterval(su_event_id);
       }
 
-
+      //クッキークリック
       function cookieClick(num) {
         var cookie_img = document.getElementById('cookie_img');
         cookie_img.classList.remove('animate__animated','animate__shakeX');
         void cookie_img.offsetWidth;
         cookie_img.classList.add('animate__animated','animate__shakeX');
-
 
         cookie_count= cookie_count + num;
 
