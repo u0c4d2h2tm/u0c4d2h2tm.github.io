@@ -70,10 +70,10 @@
             if (cookie_count > this.cost) {
               cookie_count -= this.cost;
               let self=this;
-              let return_id=setInterval(function()){
+              let return_id=setInterval(function(){
                 self.count_up(self.add_num);
               },1000);
-              this.event_ids.push(return_id);
+              this.interval_ids.push(return_id);
             }
           }
 
@@ -85,8 +85,11 @@
       }
       //核施設のオブジェクトをクラスから生成
       let cursor = new building(10000,1);
+
       let grandma = new Building(10000,1);
+
       let farm = new Building(10000,8);
+
       let mine = new Building(10000,20);
 
       //カーソルの施設を買うときは
@@ -120,7 +123,7 @@
 
 
         cookie_count= cookie_count + num;
-        
+
       }
 
       function cursor() {
