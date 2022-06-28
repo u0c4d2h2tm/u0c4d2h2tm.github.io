@@ -27,7 +27,13 @@
 
       xhr.onreadystatechange = function() {
         if(xhr.readyState === 4 && xhr.status === 200) {
-          let weathercode = JSON.parse(xhr.responseText)["daily"]["weathercode"][1]
+          let weathercode = JSON.parse(xhr.responseText);
+
+          let date_array = weather_dare.daily.time
+          let weather_array = weather_daye.daily.weilthercode
+
+
+          curieitweathrtabre(ayyay,weather);
         //  document.write(weathercode);
         }
       }
@@ -42,8 +48,6 @@
 
 
       weather =["晴","晴","晴","晴","晴","晴","晴"];
-
-    curieitweathrtabre(ayyay,weather);
 
       function curieitweathrtabre(date_array,weather_array){
 
