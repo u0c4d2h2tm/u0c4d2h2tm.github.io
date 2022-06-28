@@ -3,32 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style media="screen">
-      tr,td,th{border: 1px;}
-    </style>
   </head>
   <body>
     <table>
       <tr id="date">
 
       </tr>
-      <tr>
+      <tr id="weather">
 
-      </tr id="weather">
+      </tr>
+
     </table>
-
     <script type="text/javascript">
-      let xhr = new XMLHttpRequest();
+      var xhr = new XMLHttpRequest();
 
       xhr.open('GET', "https://api.open-meteo.com/v1/forecast?latitude=35.6785&longitude=139.6823&daily=weathercode&timezone=Asia%2FTokyo");
       xhr.send();
 
       xhr.onreadystatechange = function() {
-          if(xhr.readyState === 4 && xhr.status === 200) {
-
-            let weathercode = JSON.parse(xhr.responseText)["daily"]["weathercode"][1];
-            document.write(weathercode)
-          }
+        if(xhr.readyState === 4 && xhr.status === 200) {
+          let weathercode = JSON.parse(xhr.responseText)["daily"]["weathercode"][1]
+          document.write(weathercode);
+        }
       }
 
       array =["2022-6-16",
@@ -39,22 +35,12 @@
               "2022-6-21",
               "2022-6-22"];
 
-      let tr_date =document.getElementById('date');
-      array.forEach(function(date,i){
-        tr_date.innerHTML = tr_date.innerHTML +date;
-      });
-
+    let t_deta =document.getElementById('deta');
+     array.forEach(function(date,i){
+      t_deta.innerHTML = t_deta.innerHTML + deta;
+     });
 
     </script>
 
-<table>
-  <tr id="date">
-
-  </tr>
-  <tr>
-
-  </tr id="weather">
-</table>
-
   </body>
-</html>
+  </html>

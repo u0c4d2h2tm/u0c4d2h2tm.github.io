@@ -77,7 +77,7 @@
               let self = this;
               let return_id =setInterval(function(){
                 self.count_up(self.add_num);
-              },1000);
+              },self.interval_time);
               this.interval_ids.push(return_id);
             }
           }
@@ -88,15 +88,6 @@
             clearInterval(return_id);
           }
       }
-      //核施設のオブジェクトをクラスから生成
-      let cursor = new Building(10000,1);
-
-      let grandma = new Building(10000,1);
-
-      let farm = new Building(10000,8);
-
-      let mine = new Building(10000,20);
-
 
       setInterval(save_action,1000);
       function save_action() {
@@ -112,6 +103,17 @@
       function event_clear() {
         clearInterval(su_event_id);
       }
+
+      //核施設のオブジェクトをクラスから生成
+      let cursor = new Building(1000,1,10);
+
+      let grandma = new Building(1000,4,100);
+      
+      let farm = new Building(1000,8,100);
+
+      let mine = new Building(1000,100,100);
+
+      let factly = new Building(1000,20,100);
 
       //クッキークリック
       function cookieClick(num) {
@@ -160,7 +162,8 @@
           cookie_count -= 300;
           setInterval(cookieClick,1000,100);
         }
-      }*/
+      }
+    */
 
       /*施設切り替え処理*/
       function buildings_switch() {
@@ -195,6 +198,8 @@
       </div>
 
       <div class="item3">
+
+
        <div id="buildings_buy">
         <span onclick="buildings_switch('buy')">//購入//</span>
         <ul>
@@ -207,7 +212,7 @@
       </div>
 
       <div id="buildings_sell">
-        <span onclick="buildings_switch()">//売却//</span>
+        <span onclick="buildings_switch('sell')">//売却//</span>
         <ul>
           <li onclick="sell_cursor()">カーソル</li>
           <li onclick="sell_grandma()">グランマ</li>
