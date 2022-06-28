@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+
     <style media="screen">
      table,tr,td,th{border: 1px solid black;}
    </style>
@@ -30,7 +32,7 @@
         }
       }
 
-      array =["2022-6-16",
+      /*rray =["2022-6-16",
               "2022-6-17",
               "2022-6-18",
               "2022-6-19",
@@ -41,6 +43,10 @@
 
       weather =["晴","晴","晴","晴","晴","晴","晴"];
 
+      */
+
+      function curieitweathrtabre(date_array,weather_array){
+
     let t_date =document.getElementById('date');
     let t_weather =document.getElementById('weather');
 
@@ -48,6 +54,7 @@
       t_date.innerHTML = t_date.innerHTML + "<th>" + date + "</th>";
       t_weather.innerHTML = t_weather.innerHTML + "<th>" + weather[i] + "</th>";
      });
+   }
 
     </script>
 
