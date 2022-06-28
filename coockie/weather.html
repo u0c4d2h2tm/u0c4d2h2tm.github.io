@@ -13,7 +13,7 @@
 
       </tr>
       <tr id="weather">
-        <td>晴</td>
+
       </tr>
 
     </table>
@@ -42,8 +42,11 @@
       weather =["晴","晴","晴","晴","晴","晴","晴"];
 
     let t_date =document.getElementById('date');
+    let t_weather =document.getElementById('weather');
+
      array.forEach(function(date,i){
       t_date.innerHTML = t_date.innerHTML + "<th>" + date + "</th>";
+      t_weather.innerHTML = t_weather.innerHTML + "<th>" + weather[i] + "</th>";
      });
 
     </script>
