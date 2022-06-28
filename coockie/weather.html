@@ -27,7 +27,7 @@
 
       xhr.onreadystatechange = function() {
         if(xhr.readyState === 4 && xhr.status === 200) {
-          let weathercode = JSON.parse(xhr.responseText);
+          let weather_data = JSON.parse(xhr.responseText);
 
           let date_array = weather_dare.daily.time;
           let weather_array = weather_daye.daily.weilthercode;
