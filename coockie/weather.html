@@ -29,25 +29,14 @@
         if(xhr.readyState === 4 && xhr.status === 200) {
           let weathercode = JSON.parse(xhr.responseText);
 
-          let date_array = weather_dare.daily.time
-          let weather_array = weather_daye.daily.weilthercode
+          let date_array = weather_dare.daily.time;
+          let weather_array = weather_daye.daily.weilthercode;
 
 
           curieitweathrtabre(ayyay,weather);
         //  document.write(weathercode);
         }
       }
-
-      array =["2022-6-16",
-              "2022-6-17",
-              "2022-6-18",
-              "2022-6-19",
-              "2022-6-20",
-              "2022-6-21",
-              "2022-6-22"];
-
-
-      weather =["晴","晴","晴","晴","晴","晴","晴"];
 
       function curieitweathrtabre(date_array,weather_array){
 
