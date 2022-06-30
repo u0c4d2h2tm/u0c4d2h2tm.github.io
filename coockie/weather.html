@@ -25,11 +25,10 @@
 
       xhr.onreadystatechange = function() {
         if(xhr.readyState === 4 && xhr.status === 200) {
-          let weather_data = JSON.parse(xhr.responseText);
+          let date_array = JSON.parse(xhr.responseText)["daily"]["daily"];
+          let weather_array = JSON.parse(xhr.responseText)["daily"]["daily"];
 
-          let date_array = weather_dare.daily.time;
-          let weather_array = weather_daye.daily.weathercode;
-
+          weather_array = weather_array.map(n => wcodeToStr(n));
 
           curieitweathrtabre(date_array,weather_array);
         //  document.write(weathercode);
@@ -43,18 +42,22 @@
 
      array.forEach(function(date,i){
       t_date.innerHTML = t_date.innerHTML + "<th>" + t_date + "</th>";
-      t_weather.innerHTML = t_weather.innerHTML + "<th>" + weather_array + "</th>";
+      t_weather.innerHTML = t_weather.innerHTML + "<th>" + t_weather + "</th>";
      });
    }
 
    w_code = 3;
    wcodeToStr(w_code);
-   function wcodeToStr(){
-     let result;
-     if(code ==3){
-       result = "晴"
-     }
 
+   function wcodeToStr(){
+     let w_comde_list ={0:"快晴",
+                        1:"晴",
+                        2:"晴",
+                        3:"晴",
+                        45:"曇り",
+                        61："雨",
+                      }
+                      return w_comde_list[pareInt(sode)]
 
    }
 
