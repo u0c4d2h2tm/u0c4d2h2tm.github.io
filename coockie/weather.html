@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-
-
     <style media="screen">
      table,tr,td,th{border: 1px solid black;}
    </style>
@@ -44,9 +42,20 @@
     let t_weather =document.getElementById('weather');
 
      array.forEach(function(date,i){
-      t_date.innerHTML = t_date.innerHTML + "<th>" + date + "</th>";
-      t_weather.innerHTML = t_weather.innerHTML + "<th>" + weather_array[i] + "</th>";
+      t_date.innerHTML = t_date.innerHTML + "<th>" + t_date + "</th>";
+      t_weather.innerHTML = t_weather.innerHTML + "<th>" + weather_array + "</th>";
      });
+   }
+
+   w_code = 3;
+   wcodeToStr(w_code);
+   function wcodeToStr(){
+     let result;
+     if(code ==3){
+       result = "晴"
+     }
+
+
    }
 
     </script>
