@@ -1,0 +1,142 @@
+body{margin:0;}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#timeline{width:600px;
+  margin-top:119px;
+  border-width: 0px thin;
+  border-style: solid;
+  border-color: #CCC;
+}
+
+#form_area{
+  position: fixed;
+  width: 570px;
+  height: 88px;
+  top:0;
+  margin-left: -1px;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    background-color: #FFF;
+}
+
+.m-form-submit-button {
+    display: inline;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(29, 155, 240);
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.m-form-submit-button:hover {
+    background-color: rgb(29, 155, 240);
+}
+
+.m-form-submit-button:focus {
+    outline: 0;
+    background-color: rgb(135 206 255);
+    border: 2px solid rgb(33, 150, 243);
+}
+
+
+.m-form-text {
+  font-size: 17px;
+    height: 2.4em;
+    width: 300px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.m-form-text:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+
+
+
+
+.tweet{display:flex;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #CCC;
+  padding:15px;
+  ;
+}
+
+.append{transition: all 300ms;
+  margin-top: 0!important;
+}
+
+
+.icon{width:70px;}
+.icon img{width:50px;border-radius: 50%; }
+.tweet_box{ flex: 1; }
+
+.action{display:flex;}
+.action span{width:25%;}
+.username{font-weight: bold;}
+.name{padding-left:5px;
+  font-weight: lighter;
+  color:gray;}
+.date{padding-left:5px;
+  font-weight: lighter;
+  color:gray;}
+.date::before {
+  content: "- ";}
+.text{padding-top:3px;
+  padding-bottom:5px;font-family: 'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック';
+font-size: 16px;
+line-height: 18px;
+word-break: break-all;
+}
+.icon_chat{
+  padding-left:35px;
+  background-image: url(../img/chat.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon_fav{
+  padding-left:35px;
+  background-image: url(../img/fav.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon_res{
+  padding-left:35px;
+  background-image: url(../img/res.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon_share{
+  padding-left:35px;
+  background-image: url(../img/share.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+@keyframes fadeInAnime {
+0%{
+  margin-top:
+  }
+
+100%{
+  /*ここに終了のCSSを記述*/
+  }
+}
