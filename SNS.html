@@ -73,7 +73,9 @@
     <div class="container">
       <div id="timeline">
         <div class="tweet">
+
           <div class="icon">
+
             <img src="kinngudamu.jpg" alt="">
           </div>
 
@@ -86,7 +88,6 @@
             </div>
             <div class="text">
               ツイートの表示
-
             </div>
             <div class="action">
                 <span class="icon_chat">0</span>
@@ -94,62 +95,48 @@
                 <span class="icon_share">0</span>
                 <span class="icon_res">0</span>
               </div>
-
             </div>
-
           </div>
 
-        </div>
+          <script type="text/javascript">
 
-      </div>
+            let timeline = document.getElementById('timeline');
 
-      </div>
+            let tweets=[{"text":"こんにちは","gdfgdfg":"tghsfh"},
+                   {"text":"こんにちは","gdfgdfg":"tghsfh"}
+                 ];
 
-        <script type="text/javascript">
-
-          let timeline = document.getElementById('timeline');
-
-          let tweets=["こんにちは",
-                 "こんばんわ",
-                 "へへ",
-                 "明日何食べようかな",
-                 "マック最高～～",
-                 "Windowsごみ",
-               ];
-
-          tweets.forEach((tweet,i) => {
-              let template = `  <div class="tweet">
-                <div class="icon">
-                  <img src="kinngudamu.jpg" alt="">
-                </div>
-
-                <div class="tweet_box">
-
-                  <div class="username">
-                    なんだてめぇ
-                    <span class="name">@yeurneme</span>
-                    <span class="date">2045/7/5</span>
+            tweets.forEach((tweets,i) => {
+                let template = `  <div class="tweet">
+                  <div class="icon">
+                    <img src="kinngudamu.jpg" alt="">
                   </div>
-                  <div class="text">
-                    ツイートの表示
-                    ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                  </div>
-                  <div class="action">
-                      <span class="icon_chat">0</span>
-                      <span class="icon_fav">0</span>
-                      <span class="icon_share">0</span>
-                      <span class="icon_res">0</span>
+
+                  <div class="tweet_box">
+
+                    <div class="username">
+                      ${tweet.username}
+                      <span class="name">@yeurneme</span>
+                      <span class="date">2045/7/5</span>
                     </div>
+                    <div class="text">
+                      ${tweet.text}
+                    </div>
+                    <div class="action">
+                        <span class="icon_chat">0</span>
+                        <span class="icon_fav">0</span>
+                        <span class="icon_share">0</span>
+                        <span class="icon_res">0</span>
+                      </div>
 
                   </div>
 
-                </div>
+                 </div>`
+              timeline.innerHTML = timeline.innerHTML +template;
 
-               </div>`
-            timeline.innerHTML = timeline.innerHTML +template;
+            });
 
-          });
+          </script>
 
-        </script>
   </body>
 </html>
