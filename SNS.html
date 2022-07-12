@@ -1,95 +1,88 @@
-<!<!DOCTYPE html>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #timeline{width:600px;
+    border-width: 0px thin;
+    border-style: solid;
+    border-color: #CCC;
+  }
+  .tweet{display:flex;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #CCC;
+    padding:15px;
+  }
+  .icon{width:70px;}
+  .icon img{width:50px;border-radius: 50%; }
+  .username{font-weight: bold;}
+  .name{padding-left:5px;
+    font-weight: lighter;
+    color:gray;}
+    .date{padding-left:5px;
+      font-weight: lighter;
+      color:gray;}
+      .text{padding-top:3px;
+        padding-bottom:5px;
+        font-family: 'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック';
+        font-size: 16px;
+        line-height: 18px;
+        word-break: break-all;
+      }
+      .icon_chat{
+        padding-left:35px;
+        background-image: url(./img/chat.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .icon_fav{
+        padding-left:35px;
+        background-image: url(./img/fav.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .icon_res{
+        padding-left:35px;
+        background-image: url(./img/res.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .icon_share{
+        padding-left:35px;
+        background-image: url(./img/share.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .action{display:flex;}
+      .action span{width:25%;}
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div id="timeline">
+          <div class="tweet">
+            <div class="icon">
+              <img src="kinngudamu.jpg" alt="">
+              </div>
 
-    <title></title>
-    <style media="screen">
-      .container{
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        #timeline{width:600px;
-          margin-top:119px;
-          border-width: 0px thin;
-          border-style: solid;
-          border-color: #CCC;
-        }
-        .tweet{display:flex;
-          border-width: 0px 0px 1px 0px;
-          border-style: solid;
-          border-color: #CCC;
-          padding:15px;
-          ;
-        }
-        .icon{width:70px;}
-        .icon img{width:50px;border-radius: 50%; }
-        .tweet_box{ flex: 1; }
+              <div class="tweet_box">
 
-        .username{font-weight: bold;}
-        .name{padding-left:5px;
-          font-weight: lighter;
-          color:gray;}
-        .date{padding-left:5px;
-         font-weight: lighter;
-         color:gray;}
-           .text{padding-top:3px;
-             padding-bottom:5px;font-family: 'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック';
-             font-size: 16px;
-             line-height: 18px;
-             word-break: break-all;
-           }
-        .icon_chat{
-          padding-left:35px;
-          background-image: url(./chat.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        .icon_fav{
-          padding-left:35px;
-          background-image: url(./fav.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        .icon_res{
-          padding-left:35px;
-          background-image: url(./res.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        .icon_share{
-          padding-left:35px;
-          background-image: url(./share.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        .action{display:flex;}
-        .action span{width:25%;}
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div id="timeline">
-        <div class="tweet">
-
-          <div class="icon">
-
-            <img src="kinngudamu.jpg" alt="">
-          </div>
-
-          <div class="tweet_box">
-
-            <div class="username">
-              なんだてめぇ
-              <span class="name">@yeurneme</span>
-              <span class="date">2045/7/5</span>
-            </div>
-            <div class="text">
-              ツイートの表示
-            </div>
-            <div class="action">
+              <div class="username">
+                なんだてめぇ
+                <span class="name">@yeurneme</span>
+                <span class="date">2045/7/5</span>
+              </div>
+              <div class="text">
+                ツイートの表示
+              </div>
+              <div class="action">
                 <span class="icon_chat">0</span>
                 <span class="icon_fav">0</span>
                 <span class="icon_share">0</span>
@@ -97,46 +90,43 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <script type="text/javascript">
+      <script type="text/javascript">
 
-            let timeline = document.getElementById('timeline');
+         let timeline = document.getElementById('timeline');
+         let tweets = [{"text":"こんにちは","username":"hiroto"},
+                       {"text":"こんにちは","username":"hiroto"},
+                       {"text":"こんにちは","username":"hiroto"},
+                       {"text":"こんにちは","username":"hiroto"},];
 
-            let tweets=[{"text":"こんにちは","gdfgdfg":"tghsfh"},
-                   {"text":"こんにちは","gdfgdfg":"tghsfh"}
-                 ];
 
-            tweets.forEach((tweets,i) => {
-                let template = `  <div class="tweet">
-                  <div class="icon">
-                    <img src="kinngudamu.jpg" alt="">
-                  </div>
+         tweets.forEach((tweet,i) => {
+           let template = `  <div class="tweet">
+               <div class="icon">
+                 <img src="./kinngudamu.jpg" alt="">
+               </div>
+               <div class="tweet_box">
+                 <div class="username">
+                   ${tweet.username}
+                   <span class="name">@</span>
+                   <span class="date">2045/7/5</span>
+                 </div>
+                 <div class="text">
+                    ${tweet.text}
+                 </div>
+                 <div class="action">
+                   <span class="icon_chat">0</span>
+                   <span class="icon_fav">0</span>
+                   <span class="icon_share">0</span>
+                   <span class="icon_res">0</span>
+                 </div>
+               </div>
+             </div>`
+           timeline.innerHTML = timeline.innerHTML + template
+         });
 
-                  <div class="tweet_box">
-
-                    <div class="username">
-                      ${tweet.username}
-                      <span class="name">@yeurneme</span>
-                      <span class="date">2045/7/5</span>
-                    </div>
-                    <div class="text">
-                      ${tweet.text}
-                    </div>
-                    <div class="action">
-                        <span class="icon_chat">0</span>
-                        <span class="icon_fav">0</span>
-                        <span class="icon_share">0</span>
-                        <span class="icon_res">0</span>
-                      </div>
-
-                  </div>
-
-                 </div>`
-              timeline.innerHTML = timeline.innerHTML +template;
-
-            });
-
-          </script>
-
-  </body>
-</html>
+      </script>
+    </body>
+    </html>
